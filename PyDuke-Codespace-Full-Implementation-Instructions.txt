@@ -1,0 +1,673 @@
+PYDUKE — FULL FUNCTIONAL APPLICATION BUILD INSTRUCTION
+
+You are working inside the existing PyDuke project/repository provided to you.
+
+IMPORTANT:
+The existing project is primarily a FRONTEND/UI prototype. Many features visually exist, but their underlying functionality does not.
+
+Transform the existing PyDuke frontend into a genuinely functional FREE Python-learning web application.
+
+DO NOT simply redesign the UI.
+DO NOT create fake functionality.
+Reuse useful existing components/design where possible.
+
+============================================================
+1. AUDIT FIRST
+============================================================
+
+Inspect the entire repository before coding.
+
+Identify:
+- framework/build system
+- routes/pages/components
+- lesson and game data
+- state management
+- storage/persistence
+- code editor/execution
+- API/backend
+- Gemini integration
+- package.json
+- environment configuration
+
+Determine what is genuinely functional, partially functional, or only mock/frontend.
+
+Then implement what is missing.
+
+============================================================
+2. MAIN GOAL
+============================================================
+
+PyDuke must become a REAL Python-learning platform.
+
+A student must be able to:
+
+LEARN → PRACTICE → CODE → PLAY → TYPE → GET AI HELP → TRACK PROGRESS
+
+Everything presented as a feature must actually work.
+
+============================================================
+3. REAL LESSON ENGINE
+============================================================
+
+Every lesson must open into actual educational content, not just a title/card.
+
+Each lesson should contain:
+- introduction
+- definition
+- simple explanation
+- standard Python explanation
+- syntax
+- real examples
+- expected output
+- line-by-line explanation
+- common mistakes
+- real-world example
+- practice
+- coding exercise
+- hint
+- solution explanation
+- review
+- mark complete
+- previous/next navigation
+
+Use dynamic lesson IDs/slugs.
+
+Examples:
+/learn/variables
+/learn/conditions
+/learn/loops
+/learn/lists
+/learn/functions
+
+A lesson route must load that lesson, not the lesson list.
+
+============================================================
+4. EVERYTHING MUST BE FREE
+============================================================
+
+Remove ALL access restrictions.
+
+No:
+- locked lessons
+- prerequisites
+- XP gates
+- level gates
+- premium lessons
+- subscription barriers
+
+Every lesson can be opened immediately.
+
+Recommended learning order may be shown, but it must never block access.
+
+Remove/disable logic such as:
+locked, isLocked, prerequisite, requiredLesson, minimumXP, unlockLevel, premium.
+
+Progress is for tracking, NOT restricting access.
+
+============================================================
+5. REAL PYTHON EXECUTION
+============================================================
+
+If the existing editor is only visual, implement actual Python execution.
+
+Use a suitable browser-compatible runtime such as Pyodide where practical.
+
+The student must be able to:
+- type Python
+- run Python
+- see output
+- see errors
+- reset
+- save code
+- submit exercises
+
+Do NOT fake execution with predefined responses.
+
+Run user code safely/isolated; prefer browser-side execution where practical.
+
+============================================================
+6. REAL CODING EXERCISES
+============================================================
+
+Create an exercise engine with:
+- instructions
+- starter code
+- expected behavior
+- test cases
+- hints
+- difficulty
+- XP reward
+
+Actually evaluate submitted code.
+
+Correct solution = success.
+Incorrect solution = useful feedback.
+
+Do not mark everything correct merely because code ran.
+
+============================================================
+7. REAL GAMES
+============================================================
+
+Every game in the list must be genuinely playable:
+
+1. Code Fixer
+2. Predict the Output
+3. Code Ordering
+4. Debugging Challenge
+5. Build It
+6. Typing Sprint
+7. Boss Battle
+
+Each needs real:
+- game state
+- instructions
+- gameplay
+- scoring
+- feedback
+- difficulty
+- completion
+- restart/replay
+- XP/results
+
+============================================================
+8. CODE FIXER
+============================================================
+
+Give broken Python code.
+
+Include bugs such as:
+- SyntaxError
+- NameError
+- TypeError
+- IndexError
+- indentation
+- wrong conditions
+- incorrect loops
+- incorrect functions
+
+Student edits and runs the code.
+
+Actually determine whether the bug was fixed.
+
+Use multiple challenges and increasing difficulty.
+
+============================================================
+9. PREDICT THE OUTPUT
+============================================================
+
+Show real Python snippets and ask for the output.
+
+Actually compare the answer.
+
+Track:
+- score
+- correct/wrong answers
+- streak
+- XP
+
+Explain the answer afterward.
+
+============================================================
+10. CODE ORDERING
+============================================================
+
+Give Python lines in the wrong order.
+
+Allow drag-and-drop/reordering.
+
+Actually validate the final order.
+
+Use variables, conditions, loops, functions and harder examples.
+
+============================================================
+11. DEBUGGING CHALLENGE
+============================================================
+
+Give real broken programs.
+
+Student must inspect, edit, run and fix them.
+
+Track attempts and explain the bug after completion.
+
+============================================================
+12. BUILD IT
+============================================================
+
+Give a programming objective, starter code, editor, Run, Submit, automated tests and hints.
+
+Actually test the submitted program.
+
+============================================================
+13. TYPING SPRINT
+============================================================
+
+Build a REAL typing engine.
+
+Track:
+- WPM
+- CPM
+- accuracy
+- mistakes
+- correct characters
+- incorrect characters
+- elapsed time
+- best score
+
+Use Python code and Python symbols as typing material.
+
+The timer/statistics must use actual keystrokes and elapsed time.
+
+============================================================
+14. BOSS BATTLE
+============================================================
+
+Create a real multi-stage challenge mixing:
+- multiple choice
+- output prediction
+- debugging
+- code ordering
+- coding
+- Python concepts
+
+Track lives, score, progress and XP.
+
+Actually determine whether answers are correct.
+
+============================================================
+15. REAL PROGRESS + PERSISTENCE
+============================================================
+
+Track:
+- lessons viewed/completed
+- coding exercises
+- game attempts/scores
+- XP
+- level
+- streak
+- achievements
+- typing records
+- mistakes/weak topics
+
+Do not hard-code dashboard values.
+
+Create a local student profile without authentication.
+
+Persist data using localStorage or preferably IndexedDB where appropriate.
+
+After refresh, progress must remain.
+
+============================================================
+16. ACHIEVEMENTS + REVISION
+============================================================
+
+Implement real achievements based on actual events.
+
+Examples:
+- First Lesson
+- Bug Hunter
+- Python Typist
+- Code Runner
+- Game Master
+- 7 Day Streak
+
+Track wrong concepts/questions and use weak areas for revision.
+
+============================================================
+17. DAILY PRACTICE
+============================================================
+
+Create actual daily practice using a mixture of:
+- concepts
+- output prediction
+- debugging
+- coding
+- typing
+
+Use progress to select suitable content.
+
+============================================================
+18. GEMINI AI TUTOR
+============================================================
+
+There is a Gemini API key available.
+
+Build a REAL Gemini Python tutor.
+
+CRITICAL:
+The AI must NOT be restricted to topics the student has already learned.
+
+Remove any instruction like:
+"Do not answer questions the learner has not learned."
+
+The student may ask ANY Python question, including classes, recursion, decorators, generators, async Python, etc.
+
+The AI should teach appropriately.
+
+For normal teaching:
+definition → simple explanation → example → code → output → explanation → common mistake.
+
+For exercise help:
+hint → stronger hint → explanation → solution if requested.
+
+General Python questions must never be blocked because they are outside the current lesson.
+
+============================================================
+19. GEMINI CODE HELP
+============================================================
+
+The tutor must analyze student code and explain:
+- what an error means
+- why it happened
+- how to reason about fixing it
+- possible corrections
+
+Do not claim code works without evidence.
+
+============================================================
+20. GEMINI SECURITY
+============================================================
+
+NEVER expose the permanent Gemini API key in frontend code.
+
+Never place it in:
+- React source
+- public files
+- localStorage
+- GitHub source
+- publicly exposed client variables
+
+Use a server-side environment variable such as:
+
+GEMINI_API_KEY
+
+Recommended architecture:
+
+Frontend
+  ↓
+/api/ai/chat
+  ↓
+Server
+  ↓
+Gemini API
+  ↓
+Server
+  ↓
+Frontend
+
+Do not put the actual key into source files.
+
+Do not assume an obsolete Gemini model/SDK. Use the current supported API/SDK and make the model configurable, e.g.:
+
+GEMINI_MODEL=...
+
+============================================================
+21. GEMINI CHAT UI
+============================================================
+
+Build a real chat with:
+- message history
+- input
+- send
+- loading
+- errors
+- clear chat
+- code formatting
+- copy code
+- suggested prompts
+
+Examples:
+- Explain this
+- Why is my code wrong?
+- Give me a hint
+- Show me an example
+- Teach me this
+- Give me a practice question
+- Make it harder
+
+When useful, provide Gemini with current lesson, exercise, code and error context, but NEVER restrict the AI to the current lesson.
+
+============================================================
+22. LIVE AI TUTOR
+============================================================
+
+Implement a REAL Gemini Live/realtime tutor where the currently supported Gemini API/model permits it.
+
+Support:
+- Start Live Session
+- microphone input
+- spoken student question
+- spoken AI response
+- End Session
+
+Do NOT create a fake live interface.
+
+If Gemini Live requires secure session/token architecture, keep the permanent API key server-side and use the appropriate browser-safe mechanism.
+
+Handle microphone permission, network/API failures, session termination and reconnect where appropriate.
+
+If a genuine external configuration step remains, document it instead of pretending the feature works.
+
+============================================================
+23. ROUTING — CRITICAL
+============================================================
+
+Fix the current navigation problem.
+
+Create real detail routes.
+
+Games:
+/games
+/games/code-fixer
+/games/predict-output
+/games/debugging
+/games/code-ordering
+/games/build-it
+/games/typing-sprint
+/games/boss-battle
+
+Lessons:
+/learn
+/learn/variables
+/learn/conditions
+/learn/loops
+/learn/lists
+/learn/functions
+
+Clicking an item must open that exact item.
+
+Refreshing a detail URL must keep the detail page.
+
+Browser Back must work.
+
+Use stable IDs/slugs, not array indexes.
+
+============================================================
+24. MOBILE NAVIGATION
+============================================================
+
+Existing navigation:
+Home / Learn / Code / Games / More
+
+Make every item functional.
+
+Games → game list → selected game.
+Learn → lesson list → selected lesson.
+
+Do not let child routes render the parent list.
+
+============================================================
+25. SEARCH
+============================================================
+
+Implement real lesson search.
+
+Searching "loop" should find relevant lessons.
+
+Clicking a result opens the actual lesson.
+
+============================================================
+26. REMOVE FAKE/PLACEHOLDER FEATURES
+============================================================
+
+Search for:
+TODO
+Coming Soon
+Placeholder
+Mock
+Fake
+Demo
+Sample response
+Static response
+Not implemented
+
+Replace visible fake functionality with real functionality.
+
+If something genuinely cannot be implemented, document the limitation rather than pretending it works.
+
+============================================================
+27. KEEP THE EXISTING DESIGN
+============================================================
+
+Preserve useful PyDuke branding, layout, icons and styling.
+
+Do not redesign everything unnecessarily.
+
+Goal:
+existing PyDuke design + real functionality.
+
+============================================================
+28. TEST EVERYTHING
+============================================================
+
+Before declaring completion, test:
+
+LESSONS:
+- every lesson opens
+- every lesson is unlocked
+- real content exists
+- exercises work
+- completion works
+- previous/next works
+
+GAMES:
+- every game opens
+- every game is playable
+- scoring works
+- XP works
+- replay/results work
+
+CODE:
+- valid Python executes
+- invalid Python shows errors
+- correct submissions are recognized
+- incorrect submissions are rejected
+
+TYPING:
+- timer works
+- WPM works
+- accuracy works
+- mistakes count
+- best score persists
+
+PROGRESS:
+- XP/level/streak update
+- achievements unlock
+- refresh preserves data
+
+AI:
+- Gemini chat works
+- basic and advanced Python questions work
+- questions outside current lesson work
+- errors are handled
+- API key remains secure
+
+LIVE:
+- start/session/microphone/voice/end work if supported
+
+ROUTING:
+- direct lesson URLs work
+- direct game URLs work
+- refresh works
+- browser Back works
+- mobile navigation works
+
+============================================================
+29. ACCEPTANCE CRITERIA
+============================================================
+
+Do not call the project complete until:
+
+[ ] PyDuke is no longer merely a frontend prototype.
+[ ] Every lesson opens.
+[ ] Every lesson is free/unlocked.
+[ ] Lessons contain real teaching material.
+[ ] Coding exercises work.
+[ ] Python code actually executes.
+[ ] Every game works.
+[ ] Code Fixer works.
+[ ] Predict Output works.
+[ ] Code Ordering works.
+[ ] Debugging works.
+[ ] Build It works.
+[ ] Typing Sprint works.
+[ ] Boss Battle works.
+[ ] Scores are real.
+[ ] XP is real.
+[ ] Progress persists.
+[ ] Achievements are real.
+[ ] Revision works.
+[ ] Gemini Tutor works.
+[ ] Gemini can answer any Python topic.
+[ ] AI is not restricted to completed lessons.
+[ ] Gemini key is secure.
+[ ] Live Tutor is genuinely implemented where supported.
+[ ] No lesson is locked.
+[ ] No premium restrictions exist.
+[ ] Mobile navigation works.
+[ ] Direct URLs work.
+[ ] Browser Back works.
+
+============================================================
+30. FINAL INSTRUCTION
+============================================================
+
+DO NOT simply explain what should be built.
+
+YOU ARE THE CODING AGENT.
+
+Modify the existing repository.
+
+Create missing:
+- backend/API routes
+- services
+- game engines
+- lesson engine
+- code execution
+- exercise validation
+- persistence
+- progress system
+- Gemini integration
+- Live Tutor integration where supported
+
+Install dependencies.
+
+Run/build/test the application.
+
+Fix errors found during testing.
+
+If you discover another frontend-only feature while implementing the project, make it genuinely functional too.
+
+At the end provide:
+1. Files changed
+2. Architecture added
+3. Dependencies added
+4. Environment variables required
+5. Run commands
+6. Deployment/configuration instructions
+7. Gemini setup
+8. Live Tutor setup
+9. Any genuine remaining limitation
+
+FINAL GOAL:
+PyDuke must be a genuinely usable FREE Python-learning platform, not a UI demonstration.
